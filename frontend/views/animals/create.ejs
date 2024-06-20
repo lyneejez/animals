@@ -1,0 +1,28 @@
+<h2>create</h2>
+<form method="post" action="/create" class="mb-3">
+    <div class="mb-3">
+        <label for="title">title</label>
+        <input  type="text" name="title" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label for="category_id"> category</label>
+        <select name="category_id" class="form-select">
+            <option value=""> select category</option>
+            <% categories.forEach(function(category) { %>
+                <option value="<%= category.id %>"> <%= category.name %></option>
+            <% }) %>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="classification_id"> classification_id</label>
+        <select name="classification_id" class="form-select">
+            <option value=""> select classification</option>
+            <% classifications.forEach(function(classification) { %>
+                <option value="<%= classification.id %>"> <%= classification.name %> <%= classification.email %></option>
+            <% }) %>
+        <select>
+    </div>
+    <div class="mb-3">
+        <input type="submit"  value="save" class="btn btn-sm btn-primary"/>
+    </div>  
+</form>

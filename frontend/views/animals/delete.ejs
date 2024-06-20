@@ -1,0 +1,22 @@
+<h2>delete</h2>
+<form method="post" action="/delete" class="mb-3" action ="/animal/<%= animal.id %>/delete">
+    <div class="mb-3">
+        <label for="name">animal</label>
+        <input  type="text" name="animal" value="<%= animal.animals %>">
+    </div>
+    <div class="mb-3">
+        <label for="classification">classification_id</label>
+        <input  type="number" name="classification_id" value="<%= animal.classification_id %>">
+    </div>
+    <div class="mb-3">
+        <label for="category_id">category_id</label>
+        <input  type="number" name="category_id" value="<%= animal.category_id %>">
+    </div>
+    <div class="mb-3">
+        <label for="title">name</label>
+        <input  type="text" name="name" value="<%= animal.name %>">
+    </div>
+    
+    <input  type="submit" class="btn btn-sm btn-primary" value="submit">
+
+    </form>
